@@ -14,7 +14,10 @@ gem 'turbolinks', '~> 2.5.3'
 gem 'uglifier', '~> 2.7.1'
 
 group :development, :test do
+  gem 'factory_girl_rails', '~> 4.5.0'
+  gem 'rspec-rails', '~> 3.3.2'
   gem 'spring', '~> 1.3.6'
+  gem 'spring-commands-rspec', '~> 1.0.4'
 end
 
 group :development do
@@ -22,4 +25,11 @@ group :development do
   gem 'binding_of_caller', '~> 0.7.2'
   gem 'meta_request', '~> 0.3.4'
   gem 'pry-rails', '~> 0.3.4'
+end
+
+group :test do
+  gem 'capybara', '~> 2.4.4'
+  gem 'database_cleaner', '~> 1.4.1'
+  gem 'poltergeist', '~> 1.6.0'
+  gem 'shoulda-matchers', '~> 2.8.0', require: false
 end

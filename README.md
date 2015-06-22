@@ -1,6 +1,6 @@
 # Annotation Nation
 
-To be determined
+To be determined...
 
 ## License
 
