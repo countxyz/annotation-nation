@@ -6,3 +6,7 @@ default: &default
 development:
   <<: *default
   database: annotation-nation_development
+
+test:
+  <<: *default
+  database: annotation-nation_test
