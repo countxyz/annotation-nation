@@ -1,10 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Artist do
-
-  describe 'Associations' do
-    it { is_expected.to belong_to :artistable }
-  end
+RSpec.describe Creator do
 
   describe 'Lengths' do
     it do

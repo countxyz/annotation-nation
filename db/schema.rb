@@ -11,20 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150622183302) do
+ActiveRecord::Schema.define(version: 20150622190429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "artists", force: :cascade do |t|
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "name",            null: false
-    t.integer  "artistable_id"
-    t.string   "artistable_type"
+  create_table "creators", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name",       null: false
   end
-
-  add_index "artists", ["artistable_type", "artistable_id"], name: "index_artists_on_artistable_type_and_artistable_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.datetime "created_at",      null: false
