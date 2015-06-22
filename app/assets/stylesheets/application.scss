@@ -2,3 +2,12 @@
 @import 'bourbon';
 @import 'base/grid-settings';
 @import 'neat';
+
+@import 'base/defaults';
+@import 'base/mixins';
+
+@import 'shared/layout';
+@import 'shared/header';
+@import 'shared/footer';
+
+@import 'main/home';

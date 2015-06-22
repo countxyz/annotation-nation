@@ -1,0 +1,44 @@
+.site-footer {
+  color: #888;
+
+  .footer-top {
+    @include span-columns(12);
+    @include flex-center;
+    border-bottom: 0.063em solid rgb(204, 204, 204);
+    height: 50%;
+
+    .footer-top-nav  {
+
+      .footer-top-nav-links {
+
+        li {
+          display: inline;
+
+          a {
+            color: #999;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    @include span-columns(12);
+    @include flex-center;
+    height: 50%;
+
+    .footer-bottom-nav  {
+
+      .footer-bottom-nav-links {
+
+        li {
+          display: inline;
+
+          a {
+            color: #888;
+          }
+        }
+      }
+    }
+  }
+}

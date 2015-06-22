@@ -1,0 +1,70 @@
+.site-header {
+  color: #888;
+
+  .header-top {
+    @include span-columns(12);
+    @include display(flex);
+    @include justify-content(space-between);
+    border-bottom: 0.063em solid rgb(204, 204, 204);
+    height: 50%;
+
+    .site-nav {
+
+      .site-nav-links {
+
+        li {
+          display: inline;
+
+          a {
+            color: #888;
+
+            &:hover {
+              color: #FFFC64;
+            }
+          }
+        }
+      }
+    }
+
+    .user-nav {
+
+      .user-nav-links {
+
+        li {
+          display: inline;
+
+          a {
+            color: #CCC;
+
+            &:hover {
+              color: #5BA7C2;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header-bottom {
+    @include span-columns(12);
+    border-bottom: 0.063em solid rgb(204, 204, 204);
+    height: 50%;
+
+    .header-search {
+      @include span-columns(9 of 12);
+      text-align: right;
+    }
+
+    .header-create {
+      @include span-columns(1 of 12);
+    }
+
+    .header-forums {
+      @include span-columns(1 of 12);
+    }
+
+    .header-beta {
+      @include span-columns(1 of 12);
+    }
+  }
+}
