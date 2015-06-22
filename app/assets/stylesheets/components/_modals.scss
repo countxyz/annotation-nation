@@ -1,0 +1,133 @@
+.modal {
+
+  label {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+
+  .modal-state {
+    display: none;
+  }
+
+  .modal-trigger {
+    padding: 0.8em 1em;
+  }
+
+  .modal-fade-screen {
+    @include transition(opacity 0.25s ease);
+    @include position(fixed, 0 0 0 0);
+    background: rgba(0,0,0, 0.85);
+    opacity: 0;
+    padding-top: 0.6em;
+    text-align: left;
+    visibility: hidden;
+    z-index: 99999999999;
+
+    @include media(40em) {
+      padding-top: 10em;
+    }
+
+    .modal-bg {
+      @include position(absolute, 0 0 0 0);
+      cursor: pointer;
+    }
+  }
+
+  .modal-close {
+    @include position(absolute, 1.5em 1.5em null null);
+    @include size(1.5em);
+    background: white;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+      @include position(absolute, 0.188em 0.188em 0 50%);
+      @include transform(rotate(45deg));
+      @include size(0.15em 1.5em);
+      background: #DDD;
+      content: '';
+      display: block;
+      margin: -0.188em 0 0 -0.063em;
+    }
+
+    &:hover:after,
+    &:hover:before {
+      background: darken(#DDD, 10%);
+    }
+
+    &:before {
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  .modal-inner {
+    @include transition(opacity 0.25s ease);
+    background: white;
+    border-radius: 0.188em;
+    margin-top: 0;
+    margin: auto;
+    max-height: 95%;
+    overflow: auto;
+    padding: 1.5em;
+    position: relative;
+    width: 95%;
+
+    @include media(40em) {
+      max-height: 70%;
+      padding: 1.5em;
+      width: 60%;
+    }
+
+    @include media(53.75em) {
+      width: 50%;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 0 0 0.6em 0;
+      text-align: left;
+      text-transform: capitalize;
+    }
+
+    p {
+      color: #333;
+      line-height: 1.5em;
+    }
+
+    .modal-intro {
+      font-weight: 800;
+    }
+
+    .modal-content {
+      color: #333;
+
+      @include media(40em) {
+        @include columns(2 8em);
+      }
+    }
+
+    a.cta {
+      color: white;
+      display: inline-block;
+      margin-right: 0.5em;
+      margin-top: 1em;
+
+      &:last-child {
+        padding: 0 2em;
+      }
+    }
+  }
+
+  .modal-state:checked + .modal-fade-screen {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .modal-state:checked + .modal-fade-screen .modal-inner {
+    top: 0.5em;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}

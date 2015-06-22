@@ -16,10 +16,11 @@
       li = link_to 'X',       '#'
       li = link_to 'META',    '#'
 
-  nav.user-nav role='navigation'
-    ul.user-nav-links
-      li = link_to 'Sign Up', '#'
-      li = link_to 'Sign In', '#'
+  .header-user-session
+    - if current_user
+      = link_to 'Sign Out', signout_path, method: :delete
+    - else
+      == render 'sessions/sign_in_modal'
 
 .header-bottom
   .header-search Search
