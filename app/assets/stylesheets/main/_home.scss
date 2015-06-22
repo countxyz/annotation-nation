@@ -1,0 +1,17 @@
+.site-logo {
+  @include span-columns(12);
+  @include display(flex);
+  @include align-items(flex-end);
+  height: 20%;
+  padding: 2em;
+
+  .snarly-logo {
+    @include span-columns(6 of 12);
+  }
+
+  h1 {
+    @include span-columns(6 of 12);
+    margin-bottom: 0;
+    text-align: center;
+  }
+}

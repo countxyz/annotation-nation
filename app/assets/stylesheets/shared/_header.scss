@@ -1,22 +1,24 @@
 .site-header {
   color: #888;
+  font-family: sans-serif;
 
   .header-top {
     @include span-columns(12);
     @include display(flex);
     @include justify-content(space-between);
+    @include align-items(center);
     border-bottom: 0.063em solid rgb(204, 204, 204);
     height: 50%;
 
     .site-nav {
 
       .site-nav-links {
-
         li {
           display: inline;
 
           a {
-            color: #888;
+            color: #CCC;
+            font-size: 0.9em;
 
             &:hover {
               color: #FFFC64;
