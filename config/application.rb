@@ -12,6 +12,8 @@ Bundler.require(*Rails.groups)
 
 module AnnotationNation
   class Application < Rails::Application
+    config.autoload_paths += Dir["#{Rails.root}/app/models/polymorphic"]
     config.active_record.raise_in_transactional_callbacks = true
+    config.time_zone = 'UTC'
   end
 end
