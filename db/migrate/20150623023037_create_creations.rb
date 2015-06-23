@@ -6,6 +6,8 @@ class CreateCreations < ActiveRecord::Migration
       t.string :creator,  null: false
       t.string :title,    null: false
       t.text   :creation, null: false
+
+      t.references :user, index: true
     end
   end
 end

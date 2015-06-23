@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe User do
 
+  describe 'Associations' do
+    it { is_expected.to have_many(:creations) }
+  end
+
   describe 'Formats' do
     it { is_expected.to allow_value('abc@xyz.com').for :email             }
     it { is_expected.to_not allow_value('user@example,com').for :email    }

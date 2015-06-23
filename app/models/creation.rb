@@ -1,4 +1,6 @@
 class Creation < ActiveRecord::Base
+  belongs_to :user
+
   validates_presence_of :creation, :title, :creator
 
   validates_length_of :creation, minimum: 1

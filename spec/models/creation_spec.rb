@@ -2,6 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Creation do
 
+  describe 'Associations' do
+    it { is_expected.to belong_to :user }
+  end
+
   describe 'Lengths' do
     it { is_expected.to validate_length_of(:creation).is_at_least 1 }
 
