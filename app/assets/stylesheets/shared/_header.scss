@@ -8,26 +8,6 @@
     @include justify-content(space-between);
     @include align-items(center);
     border-bottom: 0.25em ridge yellow;
-    height: 50%;
-
-    .site-nav {
-
-      .site-nav-links {
-        li {
-          display: inline;
-          padding: 0 0.5em;
-
-          a {
-            color: #CCC;
-            font-size: 1.1em;
-
-            &:hover {
-              color: #FFFC64;
-            }
-          }
-        }
-      }
-    }
 
     .header-user-session {
       background: yellow;
@@ -48,34 +28,34 @@
       }
     }
   }
+}
 
-  .header-bottom {
-    @include span-columns(12);
-    height: 50%;
+.site-nav-links {
+  li {
+    display: inline;
+    padding: 0 0.25em;
 
-    .site-nav-secondary {
-      @include span-columns(6 of 12);
+    a {
+      color: #CCC;
 
-      .header-bottom-links {
-        @include display(flex);
-        @include justify-content(space-between);
-
-        li {
-          display: inline;
-          padding: 1em;
-
-          a {
-            color: #0099CC;
-            font-size: 1.1em;
-          }
-        }
+      &:hover {
+        color: #FFFC64;
       }
     }
+  }
+}
 
-    .header-search {
-      @include span-columns(6 of 12);
-      @include flex-center;
-      padding: 1em;
+.header-secondary-links {
+  @include display(flex);
+  @include justify-content(space-between);
+
+  li {
+    display: inline;
+    padding: 0 0.25em;
+
+    a {
+      color: #0099CC;
+      font-size: 1.1em;
     }
   }
 }

@@ -11,15 +11,8 @@
       li = link_to 'X',         '#'
       li = link_to 'META',      '#'
 
-  .header-user-session
-    - if current_user
-      = link_to 'Sign Out', signout_path, method: :delete
-    - else
-      == render 'sessions/sign_in_modal'
-
-.header-bottom
   nav.site-nav-secondary role='navigation'
-    ul.header-bottom-links
+    ul.header-secondary-links
       li = link_to 'Create', new_path
       li = link_to 'Forums', '#'
       li = link_to 'Beta',   '#'
@@ -29,3 +22,9 @@
       input.input-field-kyo type='text'
       label.input-label-kyo
         span.input-label-content-kyo Search
+
+  .header-user-session
+    - if current_user
+      = link_to 'Sign Out', signout_path, method: :delete
+    - else
+      == render 'sessions/sign_in_modal'

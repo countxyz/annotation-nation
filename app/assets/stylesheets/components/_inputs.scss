@@ -14,7 +14,7 @@
   border-radius: 2em;
   color: black;
   display: block;
-  padding: 0.85em 1.25em;
+  padding: 0.5em 1.25em;
   position: relative;
   width: 100%;
 
@@ -53,7 +53,6 @@
 
 .input-label-content-kyo {
   display: block;
-  padding: 0.5em 0;
 }
 
 .input-field-kyo:focus,
@@ -62,7 +61,7 @@
 }
 
 .input-field-kyo:focus + .input-label-kyo {
-  color: #fff;
+  color: #FFF;
 }
 
 .input-field-kyo:focus + .input-label-kyo::after {

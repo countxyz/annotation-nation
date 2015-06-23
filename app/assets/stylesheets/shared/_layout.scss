@@ -1,14 +1,19 @@
 *,
 *:before,
-*:after   {
-  box-sizing: border-box;
-  padding: 0;
-  margin:  0;
+*:after {
+  box-sizing: inherit;
 }
 
-html,
-body {
+html {
   height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
 }
 
 body {
@@ -16,20 +21,16 @@ body {
 
   .site-header {
     @include span-columns(12);
-    height: 15%;
+    height: 10%;
   }
 
   main {
     @include span-columns(12);
-    height: 85%;
     margin: auto;
-    margin-bottom: -15%;
   }
 
   .site-footer {
     @include span-columns(12);
-    bottom:  0;
-    height: 15%;
-    left:    0;
+    @include position(absolute, null 0 0 0);
   }
 }
