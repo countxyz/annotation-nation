@@ -1,29 +1,23 @@
 .site-header {
-  color: #888;
-  font-family: sans-serif;
+  @include display(flex);
+  @include justify-content(space-between);
+  @include align-items(center);
+  border-bottom: 0.25em ridge yellow;
 
-  .header-top {
-    @include span-columns(12);
-    @include display(flex);
-    @include justify-content(space-between);
-    @include align-items(center);
-    border-bottom: 0.25em ridge yellow;
+  .header-user-session {
+    background: yellow;
+    color: black;
+    height: 100%;
 
-    .header-user-session {
-      background: yellow;
-      color: black;
+    .modal {
       height: 100%;
 
-      .modal {
+      label {
         height: 100%;
 
-        label {
+        .modal-trigger {
+          @include flex-center;
           height: 100%;
-
-          .modal-trigger {
-            @include flex-center;
-            height: 100%;
-          }
         }
       }
     }
@@ -31,9 +25,11 @@
 }
 
 .site-nav-links {
+  padding-left: 0.5em;
+
   li {
     display: inline;
-    padding: 0 0.25em;
+    padding: 0 0.3em;
 
     a {
       color: #CCC;
@@ -46,15 +42,14 @@
 }
 
 .header-secondary-links {
-  @include display(flex);
-  @include justify-content(space-between);
 
   li {
     display: inline;
-    padding: 0 0.25em;
+    padding: 0 0.3em;
 
     a {
       color: #0099CC;
+      font-weight: 700;
       font-size: 1.1em;
     }
   }

@@ -16,21 +16,15 @@ body {
   min-height: 100%;
 }
 
-body {
-  @include outer-container;
+.site-header {
+  @include size(100% 10%);
+}
 
-  .site-header {
-    @include span-columns(12);
-    height: 10%;
-  }
+main {
+  width: 100%;
+}
 
-  main {
-    @include span-columns(12);
-    margin: auto;
-  }
-
-  .site-footer {
-    @include span-columns(12);
-    @include position(absolute, null 0 0 0);
-  }
+.site-footer {
+  width: 100%;
+  @include position(absolute, null 0 0 0);
 }

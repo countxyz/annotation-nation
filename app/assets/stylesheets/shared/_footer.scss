@@ -1,44 +1,35 @@
 .site-footer {
-  color: #888;
+  @include display(flex);
+  @include justify-content(space-between);
+  border-top: 0.2em solid white;
+}
 
-  .footer-top {
-    @include span-columns(12);
-    @include flex-center;
-    border-bottom: 0.063em solid rgb(204, 204, 204);
-    height: 50%;
+.footer-left-nav-links {
+  padding-left: 2em;
 
-    .footer-top-nav  {
+  li {
+    display: inline;
+    padding: 0 0.5em;
 
-      .footer-top-nav-links {
-
-        li {
-          display: inline;
-
-          a {
-            color: #999;
-          }
-        }
-      }
+    a {
+      color: #CCC;
+      font-size: 1.1em;
+      font-weight: 700;
     }
   }
+}
 
-  .footer-bottom {
-    @include span-columns(12);
-    @include flex-center;
-    height: 50%;
+.footer-right-nav-links {
+  padding-right: 2em;
 
-    .footer-bottom-nav  {
+  li {
+    display: inline;
+    padding: 0 0.5em;
 
-      .footer-bottom-nav-links {
-
-        li {
-          display: inline;
-
-          a {
-            color: #888;
-          }
-        }
-      }
+    a {
+      color: #CCC;
+      font-size: 1.1em;
+      font-weight: 700;
     }
   }
 }

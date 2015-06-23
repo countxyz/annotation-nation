@@ -1,12 +1,11 @@
 .site-logo {
-  @include span-columns(8);
-  @include shift(2);
   @include display(flex);
+  @include justify-content(center);
   @include align-items(flex-end);
-  padding: 1em;
+  padding-top: 2em;
 
   .site-logo-wrapper {
-    @include span-columns(4 of 8);
+    padding-right: 1em;
 
     .snarly-logo {
       @include size(25em 5em);
@@ -14,9 +13,8 @@
   }
 
   h1 {
-    @include span-columns(4 of 8);
     color: white;
     margin-bottom: 0;
-    text-align: center;
+    padding-left: 1em;
   }
 }

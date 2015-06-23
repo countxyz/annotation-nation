@@ -23,7 +23,7 @@
     visibility: hidden;
     z-index: 99999999999;
 
-    @include media(40em) {
+    @media (min-width: 40em) {
       padding-top: 10em;
     }
 
@@ -72,13 +72,13 @@
     position: relative;
     width: 95%;
 
-    @include media(40em) {
+    @media (min-width: 40em) {
       max-height: 70%;
       padding: 1.5em;
       width: 60%;
     }
 
-    @include media(53.75em) {
+    @media (min-width: 53.75em) {
       width: 50%;
     }
 
@@ -101,7 +101,7 @@
     .modal-content {
       color: #333;
 
-      @include media(40em) {
+      @media (min-width: 40em) {
         @include columns(2 8em);
       }
     }
