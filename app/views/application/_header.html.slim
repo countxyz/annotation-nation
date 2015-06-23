@@ -1,26 +1,14 @@
-nav.site-nav role='navigation'
-  ul.site-nav-links
-    li = link_to 'MUSIC',     '#'
-    li = link_to 'NEWS',      '#'
-    li = link_to 'SPORTS',    '#'
-    li = link_to 'EDUCATION', '#'
-    li = link_to 'SCREEN',    '#'
-    li = link_to 'LAW',       '#'
-    li = link_to 'TECH',      '#'
-    li = link_to 'X',         '#'
-    li = link_to 'META',      '#'
+.header-search
+  span.input--kyo
+    input.input-field-kyo type='text'
+    label.input-label-kyo
+      span.input-label-content-kyo Search
 
 nav.site-nav-secondary role='navigation'
   ul.header-secondary-links
     li = link_to 'Create', new_path
     li = link_to 'Forums', '#'
     li = link_to 'Beta',   '#'
-
-.header-search
-  span.input--kyo
-    input.input-field-kyo type='text'
-    label.input-label-kyo
-      span.input-label-content-kyo Search
 
 .header-user-session
   - if current_user

@@ -17,8 +17,12 @@ html lang='en'
     header.site-header role='banner'
       == render 'header'
 
-    main role='main'
-      == yield
+    .site-content
+      main role='main'
+        == yield
+
+      nav.categories role='navigation'
+        = render 'categories'
 
     footer.site-footer role='contentinfo'
       == render 'footer'
