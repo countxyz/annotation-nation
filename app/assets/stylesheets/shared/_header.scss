@@ -7,7 +7,7 @@
     @include display(flex);
     @include justify-content(space-between);
     @include align-items(center);
-    border-bottom: 0.063em solid rgb(204, 204, 204);
+    border-bottom: 0.25em ridge yellow;
     height: 50%;
 
     .site-nav {
@@ -15,10 +15,11 @@
       .site-nav-links {
         li {
           display: inline;
+          padding: 0 0.5em;
 
           a {
             color: #CCC;
-            font-size: 0.9em;
+            font-size: 1.1em;
 
             &:hover {
               color: #FFFC64;
@@ -27,28 +28,54 @@
         }
       }
     }
+
+    .header-user-session {
+      background: yellow;
+      color: black;
+      height: 100%;
+
+      .modal {
+        height: 100%;
+
+        label {
+          height: 100%;
+
+          .modal-trigger {
+            @include flex-center;
+            height: 100%;
+          }
+        }
+      }
+    }
   }
 
   .header-bottom {
     @include span-columns(12);
-    border-bottom: 0.063em solid rgb(204, 204, 204);
     height: 50%;
 
+    .site-nav-secondary {
+      @include span-columns(6 of 12);
+
+      .header-bottom-links {
+        @include display(flex);
+        @include justify-content(space-between);
+
+        li {
+          display: inline;
+          padding: 1em;
+
+          a {
+            color: #0099CC;
+            font-size: 1.1em;
+          }
+        }
+      }
+    }
+
     .header-search {
-      @include span-columns(9 of 12);
-      text-align: right;
-    }
-
-    .header-create {
-      @include span-columns(1 of 12);
-    }
-
-    .header-forums {
-      @include span-columns(1 of 12);
-    }
-
-    .header-beta {
-      @include span-columns(1 of 12);
+      @include span-columns(6 of 12);
+      @include flex-center;
+      padding: 1em;
     }
   }
 }

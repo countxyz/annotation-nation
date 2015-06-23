@@ -1,20 +1,15 @@
 .header-top
   nav.site-nav role='navigation'
     ul.site-nav-links
-      li = link_to 'RAP',     '#'
-      li = link_to 'POP',     '#'
-      li = link_to 'ROCK',    '#'
-      li = link_to 'LIT',     '#'
-      li = link_to 'COUNTRY', '#'
-      li = link_to 'R&B',     '#'
-      li = link_to 'NEWS',    '#'
-      li = link_to 'HISTORY', '#'
-      li = link_to 'SPORTS',  '#'
-      li = link_to 'SCREEN',  '#'
-      li = link_to 'LAW',     '#'
-      li = link_to 'TECH',    '#'
-      li = link_to 'X',       '#'
-      li = link_to 'META',    '#'
+      li = link_to 'MUSIC',     '#'
+      li = link_to 'NEWS',      '#'
+      li = link_to 'SPORTS',    '#'
+      li = link_to 'EDUCATION', '#'
+      li = link_to 'SCREEN',    '#'
+      li = link_to 'LAW',       '#'
+      li = link_to 'TECH',      '#'
+      li = link_to 'X',         '#'
+      li = link_to 'META',      '#'
 
   .header-user-session
     - if current_user
@@ -23,8 +18,14 @@
       == render 'sessions/sign_in_modal'
 
 .header-bottom
+  nav.site-nav-secondary role='navigation'
+    ul.header-bottom-links
+      li = link_to 'Create', new_path
+      li = link_to 'Forums', '#'
+      li = link_to 'Beta',   '#'
+
   .header-search
-    input placeholder='Search'
-  .header-create Create
-  .header-forums Forums
-  .header-beta   Beta
+    span.input--kyo
+      input.input-field-kyo type='text'
+      label.input-label-kyo
+        span.input-label-content-kyo Search

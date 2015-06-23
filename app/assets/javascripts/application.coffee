@@ -2,5 +2,9 @@
 #= require jquery_ujs
 #= require turbolinks
 
-#= require modal
+#= require classie
+
+#= require components/modal
+#= require components/inputs
+
 #= require sessions

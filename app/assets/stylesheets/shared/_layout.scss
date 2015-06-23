@@ -16,20 +16,20 @@ body {
 
   .site-header {
     @include span-columns(12);
-    height: 10%;
+    height: 15%;
   }
 
   main {
     @include span-columns(12);
-    height: 90%;
+    height: 85%;
     margin: auto;
-    margin-bottom: -10%;
+    margin-bottom: -15%;
   }
 
   .site-footer {
     @include span-columns(12);
     bottom:  0;
-    height: 10%;
+    height: 15%;
     left:    0;
   }
 }
