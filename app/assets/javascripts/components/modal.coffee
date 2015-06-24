@@ -1,5 +1,5 @@
 $ ->
-  $('#sign-in-modal').on 'change', ->
+  $('#signin-modal').on 'change', ->
     if $(this).is(':checked')
       $('body').addClass 'modal-open'
     else

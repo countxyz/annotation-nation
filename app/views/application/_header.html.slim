@@ -14,4 +14,4 @@ nav.site-nav-secondary role='navigation'
   - if current_user
     = link_to 'Sign Out', signout_path, method: :delete
   - else
-    == render 'sessions/sign_in_modal'
+    == render 'sessions/signin_modal'

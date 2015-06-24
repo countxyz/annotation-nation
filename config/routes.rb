@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :creations
+  resources :creations, only: [:new, :create]
 
   get 'new', to: 'creations#new'
 
