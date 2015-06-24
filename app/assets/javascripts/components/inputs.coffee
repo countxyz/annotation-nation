@@ -1,10 +1,10 @@
 do ->
   onInputFocus = (ev) ->
-    classie.add ev.target.parentNode, 'input--filled'
+    classie.add ev.target.parentNode, 'input-filled'
 
   onInputBlur = (ev) ->
     if ev.target.value.trim() == ''
-      classie.remove ev.target.parentNode, 'input--filled'
+      classie.remove ev.target.parentNode, 'input-filled'
 
   if !String::trim
     do ->
@@ -12,8 +12,9 @@ do ->
 
       String::trim = -> @replace rtrim, ''
 
-  [].slice.call(document.querySelectorAll('input.input-field-kyo')).forEach (inputEl) ->
+  [].slice.call(document.querySelectorAll('.input-field-kyo')).forEach (inputEl) ->
     if inputEl.value.trim() != ''
-      classie.add inputEl.parentNode, 'input--filled'
+      classie.add inputEl.parentNode, 'input-filled'
+
     inputEl.addEventListener 'focus', onInputFocus
-    inputEl.addEventListener 'blur', onInputBlur
+    inputEl.addEventListener 'blur',  onInputBlur
