@@ -22,7 +22,7 @@ body {
   @include size(100% 10%);
 }
 
-.site-content {
+.content-wrapper {
   @include display(flex);
   @include flex(1);
 

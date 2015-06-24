@@ -1,6 +1,7 @@
 .site-footer {
   @include display(flex);
   @include justify-content(space-between);
+  background: black;
   border-top: 0.2em solid white;
 }
 
@@ -9,10 +10,11 @@
 
   li {
     display: inline;
-    padding: 0 0.3em;
+    padding: 0 0.2em;
 
     a {
-      color: #CCC;
+      color: white;
+      font-size: 0.9em;
       font-weight: 700;
     }
   }
@@ -23,10 +25,11 @@
 
   li {
     display: inline;
-    padding: 0 0.3em;
+    padding: 0 0.2em;
 
     a {
-      color: #CCC;
+      color: white;
+      font-size: 0.9em;
       font-weight: 700;
     }
   }
