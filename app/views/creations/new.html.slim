@@ -1,6 +1,13 @@
-= simple_form_for @creation do |f|
-  = f.input :creator
-  = f.input :title
-  = f.input :creation
+main#new-creation role='main'
+  section#new-creation-form
+    = simple_form_for @creation do |f|
+      #new-creation-author-title
+        = f.input_field :author, label: false, placeholder: 'Author'
+        = f.input_field :title,  label: false, placeholder: 'Title'
 
-  = f.button :submit, 'Submit'
+      #new-creation-work
+        = f.input_field :work, label: false, placeholder: 'Work',
+          input_html: { wrap: 'off', cols: 100, rows: 30 }
+
+      #new-creation-submit
+        = f.button :submit, 'Submit'

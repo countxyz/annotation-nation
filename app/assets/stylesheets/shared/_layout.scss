@@ -10,32 +10,21 @@ html {
 }
 
 body {
-  @include display(flex);
-  @include flex-direction(column);
   position: relative;
   margin: 0;
   padding-bottom: 6rem;
   min-height: 100%;
-}
 
-.site-header {
-  @include size(100% 10%);
-}
-
-.content-wrapper {
-  @include display(flex);
-  @include flex(1);
+  .site-header {
+    @include size(100% 10%);
+  }
 
   main {
     width: 100%;
   }
-}
 
-.categories {
-  @include flex(0 0 20%);
-}
-
-.site-footer {
-  width: 100%;
-  @include position(absolute, null 0 0 0);
+  .site-footer {
+    width: 100%;
+    @include position(absolute, null 0 0 0);
+  }
 }

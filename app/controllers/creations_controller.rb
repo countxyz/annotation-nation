@@ -22,7 +22,7 @@ class CreationsController < ApplicationController
   private
 
   def creation_params
-    params.require(:creation).permit :creator, :title, :creation
+    params.require(:creation).permit :author, :title, :work
   end
 
   def set_user

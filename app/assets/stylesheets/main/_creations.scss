@@ -1,0 +1,26 @@
+#new-creation {
+  padding: 1em 5% 0 5%;
+}
+
+#new-creation-author-title {
+  @include display(flex);
+  @include justify-content(space-between);
+  padding: 1em 0;
+
+  input {
+    width: 30%;
+  }
+}
+
+#creation_work {
+  @include size(100% 31.25em);
+}
+
+#new-creation-submit {
+  @include flex-center;
+  padding-top: 1em;
+
+  .btn {
+    width: 25%;
+  }
+}

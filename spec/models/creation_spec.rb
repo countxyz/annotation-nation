@@ -7,20 +7,20 @@ RSpec.describe Creation do
   end
 
   describe 'Lengths' do
-    it { is_expected.to validate_length_of(:creation).is_at_least 1 }
-
     it do
-      is_expected.to validate_length_of(:creator).is_at_least(1).is_at_most 100
+      is_expected.to validate_length_of(:author).is_at_least(1).is_at_most 100
     end
 
     it do
       is_expected.to validate_length_of(:title).is_at_least(1).is_at_most 100
     end
+
+    it { is_expected.to validate_length_of(:work).is_at_least 1 }
   end
 
   describe 'Presence' do
-    it { is_expected.to validate_presence_of :creation }
-    it { is_expected.to validate_presence_of :creator  }
-    it { is_expected.to validate_presence_of :title    }
+    it { is_expected.to validate_presence_of :author }
+    it { is_expected.to validate_presence_of :title  }
+    it { is_expected.to validate_presence_of :work   }
   end
 end
